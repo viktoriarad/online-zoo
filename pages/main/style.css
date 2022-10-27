@@ -21,6 +21,11 @@
     src: url("../../assets/font/Roboto/Roboto-Medium.ttf");
 }
 
+@font-face {
+    font-family: Roboto-Light;
+    src: url("../../assets/font/Roboto/Roboto-Light.ttf");
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -360,5 +365,113 @@ position: absolute;
     margin: 0 auto;
 }
 
+/*Main section 4*/
+
+.fourth-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 800px;
+    padding: 0 220px;
+}
+
+.testimonials-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.testimonial-item {
+    position: relative;
+    width: 268px;
+    height: 400px;
+    padding: 22px;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.testimonial-item::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    bottom: -2px;
+    right: -2px;
+    background-image: linear-gradient(-32deg, #FEBDAB 32%, #F3A9F8 66%, #E0D8F0 100%, #eaf7fe 100%);
+    border-radius: 20px;
+    z-index:-1;
+}
+
+.user-testimonial {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #fff;
+}
+
+.user-name {
+    display: block;
+}
+
+.testimonial-paragraph, .user-location, .testimonial-data {
+    font-family: Roboto-Light;
+    font-size: 15px;
+    color: #767474;
+}
+
+.testimonial-p-wrapper {
+    height: 308px;
+    margin: 10px 0;
+    overflow: hidden;
+}
+.user-location, .testimonial-data {
+    color: #BDBDBD;
+}
+
+.slider {
+    position: relative;
+    width: 600px;
+    height: 8px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.slider::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    bottom: -2px;
+    right: -2px;
+    background-image: linear-gradient(-32deg, #FEBDAB 32%, #F3A9F8 66%, #E0D8F0 100%, #eaf7fe 100%);
+    border-radius: 5px;
+    z-index:-1;
+}
+
+.slider::after {
+    content: '';
+    width: 115px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 5px;
+    background-color: var(--main-color);
+    z-index: 1;
+}
+
+.fourth-section-btn {
+    border-radius: 5px;
+}
+
+.fourth-sec-dec {
+    position: absolute;
+    bottom: -250px;
+    right: 0;
+}
 
 
