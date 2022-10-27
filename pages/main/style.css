@@ -41,6 +41,7 @@
 }
 .navigation {
     position: fixed;
+    z-index: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -100,7 +101,6 @@
 
 .header-main {
     position: relative;
-    z-index: -1;
     background-image: url(../../assets/images/Giant_Panda.png);
     background-repeat: no-repeat;
     background-size: contain;
@@ -108,6 +108,7 @@
 }
 
 .header-title {
+    z-index: 0;
     width: 500.31px;
     height: 400px;
     position: absolute;
@@ -123,7 +124,7 @@
 
 .header-title-highlight {
     display: table-caption;
-   letter-spacing: 1px;
+    letter-spacing: 1px;
     color: var(--hightlite-color);
 }
 
@@ -153,10 +154,52 @@
     text-transform: uppercase;
     border-radius: 25px;
     border-color: transparent;
-
+    cursor: pointer;
 }
 
 
 
+/*Main Section 1*/
+.main {
+    margin: 0 220px;
+    position: relative;
+}
+
+.first-section {
+    margin: 140px 0;
+    display: flex;
+    gap: 87px;
+}
+
+.first-section-img{
+    width: 609px;
+}
+
+.first-section-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-title {
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+.subtitle {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.paragraph {
+    line-height: 22.5px;
+}
+
+.first-section-decoration {
+    position: absolute;
+    top: -135px;
+    right: -220px;
+}
 
 
