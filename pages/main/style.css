@@ -47,6 +47,25 @@
     cursor: pointer;
 }
 
+.subheading {
+    font-size: 36px;
+    line-height: 130%;
+    font-weight: 400;
+}
+
+.subtitle {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.paragraph {
+    line-height: 22.5px;
+}
+
+.align {
+    text-align: center;
+}
+
 /*Navigation styles*/
 .header {
     position: relative;
@@ -163,7 +182,6 @@
 /*Main */
 
 .main {
-    margin: 0 220px;
     position: relative;
 }
 
@@ -171,6 +189,7 @@
 
 .first-section {
     margin: 140px 0;
+    padding: 0 220px;
     display: flex;
     gap: 87px;
 }
@@ -191,25 +210,17 @@
     line-height: 120%;
 }
 
-.subtitle {
-    font-size: 24px;
-    font-weight: 400;
-}
-
-.paragraph {
-    line-height: 22.5px;
-}
-
 .first-section-decoration {
     position: absolute;
     top: -135px;
-    right: -220px;
+    right: 0px;
 }
 
 /*Main Section 2*/
 
 .second-section {
     position: relative;
+    padding: 0 220px;
 }
 
 .wrapper-bar {
@@ -279,9 +290,75 @@ position: absolute;
 }
 
 .left-dec {
-    left: -220px;
+    left: 0;
 }
 
 .right-dec {
-    right: -220px;
+    right: 0;
 }
+
+/*Main section 3*/
+.third-section {
+    padding: 80px 220px 80px 220px;
+    background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+}
+
+.donat-section-wrapper {
+    background-color: rgba(253, 253, 255, 0.52);
+    border-radius: 20px;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 80px;
+}
+
+.third-section-title {
+    color: var(--main-color);
+    font-size: 48px;
+    font-weight: 400;
+}
+
+.fw500 {
+    font-weight: 600;
+}
+
+.donat-section-instruction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0 30px;
+}
+
+.icon-wrapper {
+    position: relative;
+    width: 168px;
+    height: 168px;
+    background-color: #fff;
+    border: 1px solid var(--main-color);
+    border-radius: 5px;
+}
+.instruction-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.content-wrapper {
+    display: flex;
+    gap: 130px
+}
+
+.fit-content {
+    width: 168px;
+    margin-top: 30px;
+}
+
+.third-section-btn {
+    display: block;
+    margin: 0 auto;
+}
+
+
+
