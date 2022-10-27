@@ -34,6 +34,19 @@
     font-size: 16px;
 }
 
+.btn {
+    width: 298px;
+    height: 54px;
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    font-family: Roboto-Medium;
+    color: var(--light-color);
+    font-size: 16px;
+    text-transform: uppercase;
+    border-radius: 25px;
+    border-color: transparent;
+    cursor: pointer;
+}
+
 /*Navigation styles*/
 .header {
     position: relative;
@@ -143,27 +156,18 @@
 
 .header-btn {
     position: absolute;
-    width: 298px;
-    height: 54px;
     left: calc(50% - 298px/2 + 332px);
     top: 626px;
-    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
-    font-family: Roboto-Medium;
-    color: var(--light-color);
-    font-size: 16px;
-    text-transform: uppercase;
-    border-radius: 25px;
-    border-color: transparent;
-    cursor: pointer;
 }
 
+/*Main */
 
-
-/*Main Section 1*/
 .main {
     margin: 0 220px;
     position: relative;
 }
+
+/*Main Section 1*/
 
 .first-section {
     margin: 140px 0;
@@ -202,4 +206,82 @@
     right: -220px;
 }
 
+/*Main Section 2*/
 
+.second-section {
+    position: relative;
+}
+
+.wrapper-bar {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.bar-item {
+    border: 1px solid var(--main-color);
+    border-radius: 5px;
+}
+
+.bar-item-img {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.description {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.description-title {
+    text-transform: uppercase;
+}
+
+.arrow-wrap{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    cursor: pointer;
+}
+
+.arrow {
+position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.arrow-wrap-position-left{
+    left: calc(-63px -  20px);
+}
+
+.arrow-wrap-position-right {
+    right: calc(-63px -  20px);
+}
+
+.second-section-btn {
+    display: block;
+    margin: 90px auto;
+}
+
+.second-sec-dec {
+    position: absolute;
+    bottom: -90px;
+}
+
+.left-dec {
+    left: -220px;
+}
+
+.right-dec {
+    right: -220px;
+}
