@@ -26,6 +26,11 @@
     src: url("../../assets/font/Roboto/Roboto-Light.ttf");
 }
 
+@font-face {
+    font-family: Roboto-Thin;
+    src: url("../../assets/font/Roboto/Roboto-Thin.ttf");
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -62,6 +67,9 @@
     font-size: 24px;
     font-weight: 400;
 }
+.color-white {
+    color: var(--light-color);
+}
 
 .paragraph {
     line-height: 22.5px;
@@ -69,6 +77,11 @@
 
 .align {
     text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: var(--light-color);
 }
 
 /*Navigation styles*/
@@ -470,8 +483,113 @@ position: absolute;
 
 .fourth-sec-dec {
     position: absolute;
-    bottom: -250px;
+    bottom: -130px;
     right: 0;
+    z-index: -1;
 }
+
+/*Footer*/
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: var(--bright-color);
+    height: 450px;
+    padding: 0 220px;
+}
+
+.footer-top-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.footer-logo-wrap {
+    position: relative;
+    border: 1px solid var(--light-color);
+    cursor: pointer;
+    width: fit-content;
+}
+
+.footer-logo-title {
+    line-height: 23px;
+    font-size: 19px;
+    font-weight: 400;
+    text-align: center;
+    padding: 4px;
+    color: var(--light-color);
+}
+
+.footer-logo-bamboo {
+    position: absolute;
+    bottom: 15%;
+    left: 13%;
+}
+
+form {
+    margin-top: 20px;
+}
+
+.sub-input {
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid var(--main-color);
+    background-color: var(--bright-color);
+    color: #BDBDBD;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.submit-btn {
+    font-size: 16px;
+    color: #4B9200;
+    background-color: #F1F3F2;
+    padding: 10px 40px;
+    cursor:pointer;
+    border: 1px solid #4B9200;
+    border-radius: 5px;
+}
+
+.footer-bottom-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.social-media-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 10px;
+ }
+
+.icon-container {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-title {
+    line-height: 26px;
+    margin-left: 8px;
+}
+
+.copyright-subtitle {
+    color: var(--light-color);
+    display: block;
+    line-height: 130%;
+    font-family: Roboto-Thin;
+    font-weight: 100;
+}
+
+
+
+
+
 
 
