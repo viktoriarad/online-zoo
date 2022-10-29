@@ -45,6 +45,7 @@
 }
 
 .btn {
+    position: relative;
     width: 298px;
     height: 54px;
     background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
@@ -55,6 +56,33 @@
     border-radius: 25px;
     border-color: transparent;
     cursor: pointer;
+    z-index: 1;
+}
+
+/*.btn::before {*/
+/*    content:"";*/
+/*    position: absolute;*/
+/*    top: -2px;*/
+/*    right: -2px;*/
+/*    bottom: -2px;*/
+/*    left: -2px;*/
+/*    background: linear-gradient(113.96deg, #E47209 100%, #E47209 100%);*/
+/*    z-index: -1;*/
+/*    transition: opacity 0.3s linear;*/
+/*    opacity: 0;*/
+/*    border-radius: 25px;*/
+/*}*/
+
+/*.btn:hover::before {*/
+/*    opacity: 1;*/
+/*}*/
+
+.btn:hover {
+    background: #E47209;
+}
+
+.btn:active {
+    background: #4B9200;
 }
 
 .subheading {
@@ -91,7 +119,7 @@ a {
 }
 .navigation {
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -136,15 +164,33 @@ a {
 }
 .navigation-item{
     display: inline-block;
+    transition: .3s;
+    color: white;
+}
+
+.navigation-item:hover {
+    color: var(--main-color);
 }
 
 .navigation-link {
     text-decoration: none;
-    color: var(--light-color);
+    color: inherit;
 }
 
 .active-btn {
     color: var(--main-color);
+}
+
+.active-btn:has(~ *:hover) {
+    color: var(--light-color);
+}
+
+.link-designed {
+    transition: 0.3s;
+}
+
+.link-designed:hover {
+    color: var(--main-color-hover);
 }
 
 /*Header styles*/
@@ -206,7 +252,7 @@ a {
 /*Main Section 1*/
 
 .first-section {
-    margin: 140px 0;
+    margin: 140px 0 180px 0;
     padding: 0 220px;
     display: flex;
     gap: 87px;
@@ -252,11 +298,19 @@ a {
 .bar-item {
     border: 1px solid var(--main-color);
     border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+
 }
 
 .bar-item-img {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+    transition: 0.3s;
+}
+
+.bar-item:hover .bar-item-img {
+    transform: scale(1.1);
 }
 
 .description {
@@ -265,6 +319,12 @@ a {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+}
+
+.bar-item:hover .description {
+    background-color: rgb(45, 45, 45);
+    color: white;
+    transform: scale(1);
 }
 
 .description-title {
@@ -280,6 +340,15 @@ a {
     border-radius: 50%;
     background-color: var(--main-color);
     cursor: pointer;
+    transition: 0.3s;
+}
+
+.arrow-wrap:hover {
+    background-color: var(--main-color-hover);
+}
+
+.arrow-wrap:active {
+    background: #4B9200;
 }
 
 .arrow {
@@ -299,7 +368,7 @@ position: absolute;
 
 .second-section-btn {
     display: block;
-    margin: 90px auto;
+    margin: 90px auto 105px auto;
 }
 
 .second-sec-dec {
@@ -317,17 +386,15 @@ position: absolute;
 
 /*Main section 3*/
 .third-section {
-    padding: 80px 220px 80px 220px;
+    height: 1000px;
+    padding: 70px 220px 90px 220px;
     background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
 }
 
 .donat-section-wrapper {
     background-color: rgba(253, 253, 255, 0.52);
     border-radius: 20px;
-    height: 800px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    height: 835px;
     padding: 0 80px;
 }
 
@@ -335,10 +402,25 @@ position: absolute;
     color: var(--main-color);
     font-size: 48px;
     font-weight: 400;
+    padding-top: 40px;
+}
+
+.third-section-text {
+    padding: 35px 0;
+}
+
+.third-section-padding {
+    padding: 60px 0 50px 0;
 }
 
 .fw500 {
     font-weight: 600;
+}
+
+.support-link {
+    color: var(--bright-color);
+    text-decoration: underline #FE9013;
+    text-underline-offset: 4px;
 }
 
 .donat-section-instruction {
@@ -375,18 +457,19 @@ position: absolute;
 
 .third-section-btn {
     display: block;
-    margin: 0 auto;
+    margin: 40px auto 0 auto;
 }
 
 /*Main section 4*/
 
 .fourth-section {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 800px;
+    height: 925px;
     padding: 0 220px;
+}
+
+.testimonial-title {
+    padding: 150px 0 60px 0;
 }
 
 .testimonials-wrapper {
@@ -395,12 +478,13 @@ position: absolute;
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
+    padding-bottom: 20px;
 }
 
 .testimonial-item {
     position: relative;
     width: 268px;
-    height: 400px;
+    height: 390px;
     padding: 22px;
     background-color: #fff;
     border-radius: 20px;
@@ -451,6 +535,7 @@ position: absolute;
     margin: 0 auto;
     background-color: #fff;
     border-radius: 5px;
+    margin-bottom: calc(30px - 22px);
 }
 
 .slider::before {
@@ -479,6 +564,9 @@ position: absolute;
 
 .fourth-section-btn {
     border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .fourth-sec-dec {
@@ -541,14 +629,25 @@ form {
     margin-right: 10px;
 }
 
+.sub-input:focus-visible{
+    outline: none;
+    border: 1px solid #4B9200;
+}
+
 .submit-btn {
     font-size: 16px;
-    color: #4B9200;
+    color: var(--bright-color);
     background-color: #F1F3F2;
     padding: 10px 40px;
     cursor:pointer;
-    border: 1px solid #4B9200;
+    border: 1px solid var(--bright-color);
     border-radius: 5px;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    color: #4B9200;
+    border: 1px solid #4B9200;
 }
 
 .footer-bottom-container {
@@ -572,11 +671,21 @@ form {
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    transition: 0.3s;
+}
+
+.social-media-link:hover .icon-container {
+    background-color: var(--main-color-hover);
+}
+
+.social-media-link:hover .social-title {
+    color: var(--main-color-hover);
 }
 
 .social-title {
     line-height: 26px;
     margin-left: 8px;
+    transition: 0.3s;
 }
 
 .copyright-subtitle {
@@ -586,10 +695,3 @@ form {
     font-family: Roboto-Thin;
     font-weight: 100;
 }
-
-
-
-
-
-
-
