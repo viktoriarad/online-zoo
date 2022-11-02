@@ -1,4 +1,7 @@
-.warning-msg {
-    padding-top: 300px;
-    text-align: center;
+.header-donate {
+    background-image: url(../../assets/images/panda_bg.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: calc(390px + 80px);
+    background-position: 0 80px;
 }
