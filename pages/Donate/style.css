@@ -298,3 +298,14 @@ input::-webkit-inner-spin-button {
     text-align: center;
     margin: 34px 0 65px 0;
 }
+
+/*Footer styles*/
+
+.footer-navigation-link {
+    transition: 0.3s;
+}
+
+.footer-navigation-link:hover {
+    color: var(--main-color);
+}
+
