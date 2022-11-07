@@ -565,7 +565,7 @@ position: absolute;
     flex-direction: column;
     justify-content: space-evenly;
     background-color: var(--bright-color);
-    height: 450px;
+    height: 443px;
     padding: 0 220px;
 }
 
